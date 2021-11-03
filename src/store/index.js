@@ -5,8 +5,12 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    routes: []
   },
   mutations: {
+    setRoutes (state, routes) {
+      state.routes = routes
+    }
   },
   actions: {
   },
