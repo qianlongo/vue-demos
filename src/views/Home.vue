@@ -39,5 +39,6 @@ export default {
   .home li{
     padding-top: 10px;
     cursor: pointer;
+    text-align: center;
   }
 </style>

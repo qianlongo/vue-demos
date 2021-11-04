@@ -1,6 +1,8 @@
 <template>
-  <div class="self" @click.self="onClickSelf">
-    <div class="inner" @click="onClickInner"></div>
+  <div class="self-container">
+    <div class="self" @click.self="onClickSelf">
+      <div class="inner" @click="onClickInner"></div>
+    </div>
   </div>
 </template>
 
@@ -18,13 +20,14 @@ export default {
 }
 </script>
 
-<style>
-  body{
+<style scoped>
+  .self-container{
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
   }
+  
   .self{
     background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
     width: 200px;
