@@ -5,6 +5,10 @@ import store from './store'
 
 Vue.config.productionTip = false
 
+Vue.config.keyCodes = {
+  q: 81
+}
+
 new Vue({
   router,
   store,

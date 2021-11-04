@@ -25,7 +25,7 @@ export default {
     onListenSystemKeyDown () {
       document.addEventListener('keydown', (event) => {
         let msg = '按下了'
-
+        console.log(event.keyCode)
         if (event.ctrlKey) {
           msg += 'ctrl键'
         } else if (event.altKey) {
