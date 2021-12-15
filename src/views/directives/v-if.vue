@@ -20,10 +20,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-button{
-  display: block;
-  padding:0 10px;
-}
-</style>
