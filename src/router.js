@@ -26,8 +26,6 @@ const registerRoutes = () => {
 
 const routes = registerRoutes()
 
-console.log(JSON.stringify(routes, null, 2), '----routes')
-
 Vue.use(VueRouter)
 
 const router = new VueRouter({
