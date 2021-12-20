@@ -4,6 +4,25 @@
     <router-view/>
   </div>
 </template>
+<script>
+
+export default {
+  name: 'app',
+  provide () {
+    return {
+      userInfo: {
+        name: '前端胖头鱼'
+      }
+    }
+  },
+  data () {
+    return {
+
+    }
+  }
+}
+</script>
+
 
 <style>
 *{
