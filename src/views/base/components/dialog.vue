@@ -4,10 +4,10 @@
     <div class="dialog-body">
       <div class="dialog-title" v-if="title">{{ title }}</div>
       <!-- 注意这里，没有传title属性，时候通过插槽进行内容承接 -->
-      <slot name="title" v-else></slot>
+      <slot name="title" :userInfo="userInfo" v-else></slot>
       <div class="dialog-main">
         <!-- 声明main部分 -->
-        <slot name="main"></slot>
+        <slot name="main" :userInfo="userInfo"></slot>
       </div>
       <div class="dialog-footer">
         <div class="button-cancel" @click="onHide">取消</div>
@@ -29,6 +29,13 @@ export default {
       type: Boolean,
       default: false,
     },
+  },
+  data () {
+    return {
+      userInfo: {
+        name: '前端胖头鱼'
+      }
+    }
   },
   methods: {
     onHide () {

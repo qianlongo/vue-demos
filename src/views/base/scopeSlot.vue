@@ -5,10 +5,12 @@
       :visible.sync="visible"
     >
       <template v-slot:title>
-        <div class="dialog-title">具名插槽</div>
+        <div class="dialog-title">作用域插槽</div>
       </template>
-      <template v-slot:main>
-        <div class="slot-body">前端胖头鱼</div>
+      <!-- 注意这里 -->
+      <template v-slot:main="{ userInfo }">
+        <!-- 注意这里userInfo是Dialog组件内部的数据 -->
+        <div class="slot-body">你好{{ userInfo.name }}</div>
       </template>
     </Dialog>
   </div>
