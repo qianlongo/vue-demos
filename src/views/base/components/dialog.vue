@@ -3,8 +3,11 @@
     <div class="dialog-mask" @click="onHide"></div>
     <div class="dialog-body">
       <div class="dialog-title" v-if="title">{{ title }}</div>
+      <!-- 注意这里，没有传title属性，时候通过插槽进行内容承接 -->
+      <slot name="title" v-else></slot>
       <div class="dialog-main">
-        <slot></slot>
+        <!-- 声明main部分 -->
+        <slot name="main"></slot>
       </div>
       <div class="dialog-footer">
         <div class="button-cancel" @click="onHide">取消</div>
@@ -20,7 +23,7 @@ export default {
   props: {
     title: {
       type: String,
-      default: "标题",
+      default: "",
     },
     visible: {
       type: Boolean,
