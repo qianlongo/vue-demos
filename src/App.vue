@@ -14,11 +14,6 @@ export default {
         name: '前端胖头鱼'
       }
     }
-  },
-  data () {
-    return {
-
-    }
   }
 }
 </script>
