@@ -24,6 +24,7 @@ const registerRoutes = () => {
   return routes
 }
 
+console.log(11)
 const routes = registerRoutes()
 
 Vue.use(VueRouter)
