@@ -1,4 +1,6 @@
 module.exports = {
   // 选项...
-  publicPath: '/vue-demos/dist'
+  lintOnSave: false,
+  publicPath: '/vue-demos',
+  outputDir: 'vue-demos',
 }
